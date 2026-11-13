@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アンケートへ移動中...</title>
+  <script>
+    // 1. 4つの Google フォーム URL を設定
+    const urls = [
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWlnz9U22s8Cc3Nmjv8jvB97sT5PFfZ5l_Ue67V8VXEAHW5g/viewform?usp=dialog",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfnGYbbvNXoxLw3qIHNLrRKBuvZUp7hBoZnEykNjTkFt85a9g/viewform?usp=publish-editor",
+      "https://docs.google.com/forms/d/e/1FAIpQLSf71JO_ZVMfYz4ozl8iGqwzRFroLxp2K_rESa-wDVZnhDu69g/viewform?usp=publish-editor",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfTzp83QbmLMcOEm1PFVct_EBsKuKt7Deevu8_c_m0SC8sxRQ/viewform?usp=publish-editor"
+    ];
+
+
+    // 2. 均等確率（1/4）でランダム選出
+    const targetUrl = urls[Math.floor(Math.random() * urls.length)];
+
+
+    // 3. 履歴を残さず即座に転送（戻るボタン対策）
+    window.location.replace(targetUrl);
+  </script>
+</head>
+<body>
+  <p>アンケートページへ移動しています。そのまま少々お待ちください...</p>
+</body>
+</html>
